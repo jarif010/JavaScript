@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+        document.getElementById("myH").innerHTML="JavaScript Comments";
+        document.getElementById("myP").innerHTML="My first paragraph,";
+    </script>
+    <hr>
+    <h3>JavaScript Variables</h3>
+    <p>Sum of Variables</p>
+    <p id="result"></p>
+    <script>
+        var num1=10;
+        var num2=15;
+        var sum=num1+num2;
+        document.getElementById("result").innerHTML=
+        "result of sum is: "+sum
+    </script>
+    <p id="demo"></p>
+    <script>
+        var x,y,z;
+        x=13;
+        y=30
+        z=x+y;
+        document.getElementById("demo").innerHTML=
+        "value of z is "+z+"."
+    </script>
+    <hr>
+    <h2>Operations- Addition, Subtraction, Multiplication, Division</h2>
+    <p id="op1"></p>
+    <p id="op2"></p>
+    <p id="op3"></p>
+    <p id="op4"></p>
+    <script>
+        var a,b,c,d,m,n;
+        m=50;
+        n=25;
+        a=m+n;
+        b=m-n;
+        c=m*n;
+        d=m/n;
+        document.getElementById("op1").innerHTML=a
+        document.getElementById("op2").innerHTML=b
+        document.getElementById("op3").innerHTML=c
+        document.getElementById("op4").innerHTML=d
+    </script>
+</body>
+</html>
