@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Objects and its Properties</h2>
+    <p>There are two ways of accessing an object's Properties.
+        They are .property or ["property"]</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            var person1={
+                name:"marjuk",age:10,profession:"student",
+            };
+            var person2={
+                name:"Alif",age:30,profession:"doctor",
+            };
+            document.getElementById("demo1").innerHTML="I am "+person1.name
+            +". I am a "+person1.profession+" and I am "+person1.age+" years old.";
+            document.getElementById("demo2").innerHTML=person2.profession
+        </script>
+</body>
+</html>
