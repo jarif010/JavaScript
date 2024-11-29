@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>arrays</h2>
+    <p id="properties"></p>
+    <p id="originalarray"></p>
+    <p id="join"></p>
+    <p id="arrayafterpop"></p>
+    <p id="poppedarray"></p>
+    <script>
+        var person={
+            name:"mark",profession:"student"
+        };
+        document.getElementById("properties").innerHTML="He is "+
+        person.name+" and he is a "+person.profession
+        var fruits=["banana","mango","watermelon","guava"]
+        document.getElementById("originalarray").innerHTML=fruits
+        document.getElementById("join").innerHTML=fruits.join(", ")
+        document.getElementById("arrayafterpop").innerHTML=fruits;
+        fruits.pop()
+        document.getElementById("poppedarray").innerHTML=fruits.pop()
+    </script>
+</body>
+</html>
