@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Static Class Method</h2>
+    <script>
+        class Student{
+            constructor(name){
+                this.name= name
+            }
+            static Hello(){
+                return "Hello! "
+            }
+            static Welcome(misty){
+                return "Welcome "+ misty.name
+            }
+            Hi(){
+                return "Hi "+ this.name
+            }
+        }
+        myname= new Student('Carol')
+        document.write(Student.Hello())
+        document.write('<br>')
+        document.write(myname.Hi())
+        document.write("<br>")
+        document.write(Student.Welcome(myname))
+    </script>
+    <hr>
+    <h2>JavaScript Class Inheritance</h2>
+<p id="details"></p>
+<script>
+    class Car{
+        constructor(brand){
+            this.carname= brand;
+        }
+        present(){
+            return "I have a "+ this.carname
+        }
+    }
+    class Model extends Car{
+        constructor(brand,model){
+            super(brand);
+            this.model=model;
+        }
+        show(){
+            return this.present()+ ', this is a '+ this.model;
+        }
+    }
+    let mycar= new Model('Ford','Mustang')
+    document.getElementById('details').innerHTML=mycar.show();
+</script>
+</body>
+</html>
