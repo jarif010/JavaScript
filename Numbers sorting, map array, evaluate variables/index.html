@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript array sorting</h2>
+    <button type="button" onclick="ascending()">Ascending order</button><br>
+    <button type="button" onclick="descending()">descending order</button><br>
+    <p id="result"></p>
+    <script>
+        var points=[30,40,20,34,50,38];
+        document.getElementById("result").innerHTML=points
+        function ascending(){
+            numbers.sort(function(a,b){return a-b})
+            document.getElementById("result").innerHTML=points
+        }
+        function descending(){
+            numbers.sort(function(a,b){return b-a})
+            document.getElementById("result").innerHTML=points
+        }
+    </script>
+    <hr>
+    <p>Multiplying all values of array with 10</p>
+    <p id="product"></p>
+    <script>
+        var numbers=[2,4,24,13,39]
+        function multiply(num){
+            return num*10
+        }
+        var newarray=numbers.map(multiply);
+        document.getElementById('product').innerHTML=newarray
+    </script>
+    <hr>
+    <p>Click the button to evaluate/execute JavaScript code</p>
+    <button type="button" onclick="string()">evaluate</button>
+    <p id="preview"></p>
+    <script>
+        function string(){
+            var x,y,a,b,c;
+            x=10
+            y=20
+            a=eval("x+y")+"<br>"
+            b=eval("2*2")+"<br>"
+            c=eval("y-x")+'<br>'
+            document.getElementById("preview").innerHTML=a+b+c
+        }
+    </script>
+</body>
+</html>
