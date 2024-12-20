@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Converts a java script object into a string,and sends
+        data to device</h2>
+    <p id="result"></p>
+    <script>
+        var myobj,myjson,newobj
+        myobj={name:"Ash",age:10,grade:5}
+        myjson=JSON.stringify(myobj)
+        newobj=JSON.parse(myjson)
+        document.getElementById("result").innerHTML=newobj.name
+    </script>
+</body>
+</html>
