@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Shuffler</title>
+</head>
+<body>
+    <h1>Click on the Label</h1>
+    <div id="number-label"
+    style="font-size: 100px; border: 10px solid;">0</div>
+    <script>
+        const label = document.getElementById('number-label');
+        let intervalId = null;
+        let isShuffling = true;
+
+        function shuffleNumbers() {
+            intervalId = setInterval(() => {
+                const randomNumber = Math.floor(Math.random() * 10);
+                label.textContent = randomNumber;
+            }, 100);
+        }
+
+        function stopShuffling() {
+            clearInterval(intervalId);
+            intervalId = null;
+            isShuffling = false;
+            label.style.backgroundColor = "lightgreen";
+        }
+
+        function startShuffling() {
+            shuffleNumbers();
+            isShuffling = true;
+            label.style.backgroundColor = "";
+        }
+
+        label.addEventListener('click', () => {
+            const currentNumber = parseInt(label.textContent, 10);
+            
+            if (isShuffling) {
+                if (currentNumber % 2 === 0) {
+                    stopShuffling();
+                    alert("Shuffling stopped! You clicked on an even number.");
+                } else {
+                    alert("Keep trying! It's an odd number.");
+                }
+            } else {
+                startShuffling();
+                alert("Shuffling resumed!");
+            }
+        });
+        shuffleNumbers();
+    </script>
+</body>
+</html>
